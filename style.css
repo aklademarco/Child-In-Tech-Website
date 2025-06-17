@@ -13,10 +13,10 @@
   --bg-color: rgba(246, 249, 245, 0.947);
   --second-bg-color: rgb(123, 154, 155);
   --text-color: #1e1c1c;
-  --main-color: red;
+  --main-color: #ff6600;
 }
 html {
-  font-size: 100%;
+  font-size: 85%;
   overflow-x: hidden;
 }
 
@@ -41,14 +41,14 @@ body {
 }
 
 .navbar a {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-left: 4rem;
   color: var(--text-color);
 }
 
 .navbar img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -62,7 +62,6 @@ body {
   justify-content: left;
   align-items: center;
   overflow: hidden;
-
   margin-bottom: 2rem;
 }
 
@@ -83,7 +82,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #ffff;
   font-weight: 600;
   line-height: 1.2;
@@ -91,7 +90,8 @@ body {
 
 .hero p {
   color: #ffff;
-  font-size: 6rem;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
 }
 
 .hero h1 span {
@@ -103,21 +103,25 @@ body {
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background-color: var(--main-color);
-  color: white;
-  font-size: 1.6rem;
-  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main-color);
+  background-color: white;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  margin: 8px; 
+  margin-top: 3rem; 
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
 }
 
 .btn:hover {
-  background-color: #ddc229;
+  background-color: var(--main-color);
   transition: 0.3s;
+  color: white;
+  border: 2px solid white;
 }
 
 .video-content {
@@ -143,6 +147,7 @@ body {
   font-size: 1.8rem;
   color: var(--text-color);
   flex-direction: column;
+  padding: 12px;
 }
 
 .video-txt {
@@ -152,7 +157,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-top: 2.5rem;
 }
 
@@ -1348,7 +1353,7 @@ section,
 }
 
 .learning-features li::before {
-  content: "✔"; /* Using a simple checkmark, can be replaced with an icon */
+  content: "✔"; 
   color: var(--main-color);
   margin-right: 10px;
   font-size: 1.8rem;
@@ -1365,7 +1370,7 @@ section,
   transition: background-color 0.3s ease;
 }
 .cta-btn:hover {
-  background-color: #c00000;
+  background-color: var(--main-color);
 }
 
 .learning-visual {
@@ -1397,16 +1402,16 @@ section,
 }
 
 .updates {
-  display: inline-block; /* Changed from flex to inline-block for simpler centering */
-  flex-direction: column; /* Kept for potential future use if display is flex */
-  align-items: center; /* Kept for potential future use if display is flex */
-  margin: 0 15px 30px; /* Added horizontal margin for spacing */
+  display: inline-block; 
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 15px 30px; 
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  width: 300px; /* Fixed width for consistency */
-  vertical-align: top; /* Align cards to the top */
+  width: 300px; 
+  vertical-align: top; 
 }
 
 .updates img {
@@ -1426,7 +1431,7 @@ section,
 .media-highlight {
   padding: 40px 20px;
   text-align: center;
-  background-color: #f9f9f9; /* Light background for section differentiation */
+  background-color: #f9f9f9; 
 }
 
 .media-highlight h2 {
@@ -1464,7 +1469,7 @@ section,
   }
   .categories-grid,
   .resources-grid {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    grid-template-columns: 1fr; 
   }
   .update-container h1 {
     font-size: 2.5rem;
@@ -1473,7 +1478,7 @@ section,
     font-size: 2rem;
   }
   .updates {
-    width: calc(100% - 40px); /* Adjust width for smaller screens */
+    width: calc(100% - 40px); 
     margin-left: auto;
     margin-right: auto;
   }
@@ -1538,7 +1543,7 @@ section,
 }
 
 .text-content h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: var(--main-color);
   margin-bottom: 30px;
   font-weight: 700;
@@ -1547,7 +1552,7 @@ section,
 }
 
 .text-content p {
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-color);
   margin-bottom: 25px;
