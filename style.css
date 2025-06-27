@@ -698,7 +698,7 @@ body {
 
 .footer-socials .social-icons a:hover {
   transform: scale(1.2);
-  color: #00aced;
+  color: var(--main-color);
 }
 
 .footer-bottom {
