@@ -60,9 +60,26 @@ body {
   height: 100vh;
   display: flex;
   justify-content: left;
-  align-items: center;
+  align-items: start;
   overflow: hidden;
   margin-bottom: 2rem;
+}
+
+/* Set max height for hero section on smaller screens */
+@media (max-width: 768px) {
+  .home {
+    height: 70vh;
+    max-height: 600px;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    height: 60vh;
+    max-height: 500px;
+    min-height: 400px;
+  }
 }
 
 .overlay {
@@ -78,20 +95,41 @@ body {
 .hero {
   position: relative;
   z-index: 2;
-  padding-left: 5rem;
+  padding-left: 2.5rem;
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
   color: #ffff;
   font-weight: 600;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero p {
   color: #ffff;
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Allow text wrapping on smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+
+  .hero p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
 }
 
 .hero h1 span {
@@ -110,8 +148,8 @@ body {
   background-color: white;
   border: 2px solid var(--main-color);
   border-radius: 10px;
-  margin: 8px; 
-  margin-top: 3rem; 
+  margin: 8px;
+  margin-top: 4rem;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(6px);
@@ -1353,7 +1391,7 @@ section,
 }
 
 .learning-features li::before {
-  content: "✔"; 
+  content: "✔";
   color: var(--main-color);
   margin-right: 10px;
   font-size: 1.8rem;
@@ -1402,16 +1440,16 @@ section,
 }
 
 .updates {
-  display: inline-block; 
-  flex-direction: column; 
-  align-items: center; 
-  margin: 0 15px 30px; 
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px 30px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  width: 300px; 
-  vertical-align: top; 
+  width: 300px;
+  vertical-align: top;
 }
 
 .updates img {
@@ -1431,7 +1469,7 @@ section,
 .media-highlight {
   padding: 40px 20px;
   text-align: center;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
 }
 
 .media-highlight h2 {
@@ -1469,7 +1507,7 @@ section,
   }
   .categories-grid,
   .resources-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
   .update-container h1 {
     font-size: 2.5rem;
@@ -1478,7 +1516,7 @@ section,
     font-size: 2rem;
   }
   .updates {
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     margin-left: auto;
     margin-right: auto;
   }
